@@ -1,26 +1,41 @@
-**Pre-trained Image Classifier to Identify Dog Breeds**
-<br>**Description:**
-Your city is hosting a citywide dog show and you have volunteered to help the organizing committee with contestant registration. Every participant that registers must submit an image of their dog along with biographical information about their dog. The registration system tags the images based upon the biographical information.
-Some people are planning on registering pets that aren’t actual dogs.
-You need to use an already developed Python classifier to make sure the participants are dogs.
-<br>**Tasks:**
-Using Python skills, you will determine which image classification algorithm works the "best" on classifying images as "dogs" or "not dogs".
-Determine how well the "best" classification algorithm works on correctly identifying a dog's breed. If you are confused by the term image classifier look at it simply as a tool that has an input and an output. The Input is an image. The output determines what the image depicts. (for example, a dog). Be mindful of the fact that image classifiers do not always categorize the images correctly.
-Time how long each algorithm takes to solve the classification problem. With computational tasks, there is often a trade-off between accuracy and runtime. The more accurate an algorithm, the higher the likelihood that it will take more time to run and use more computational resources to run.
-<br>**Principal Objectives:**
-Correctly identify which pet images are of dogs (even if the breed is misclassified) and which pet images aren't of dogs.
-Correctly classify the breed of dog, for the images that are of dogs.
-Determine which CNN model architecture (ResNet, AlexNet, or VGG), "best" achieve objectives 1 and 2.
-Consider the time resources required to best achieve objectives 1 and 2, and determine if an alternative solution would have given a "good enough" result, given the amount of time each of the algorithms takes to run.
-<br>**Project outline:**
-Time your program Use Time Module to compute program runtime
-Get program Inputs from the user Use command line arguments to get user inputs
-Create Pet Images Labels Use the pet images filenames to create labels Store the pet image labels in a data structure (e.g. dictionary)
-Create Classifier Labels and Compare Labels Use the Classifier function to classify the images and create the classifier labels Compare * Classifier Labels to Pet Image Labels Store Pet Labels, Classifier Labels, and their comparison in a complex data structure (e.g. dictionary of lists)
-Classifying Labels as "Dogs" or "Not Dogs" Classify all Labels as "Dogs" or "Not Dogs" using dognames.txt file Store new classifications in the complex data structure (e.g. dictionary of lists)
-Calculate the Results Use Labels and their classifications to determine how well the algorithm worked on classifying images and print the results.
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/1c9b89e8-f779-4562-a855-8967a1411a1a" alt="description" width="desired-width">
-</p>
 
                                                         
+**udacity-dog-breed-classifier**
+Python application to identify dog breeds by uploading images using three pretrained neural networks (Nanodegree Project 1: Udacity AI Programming with Python)
+
+**purpose**
+Building a Python application for image classification within Udacity nanodegree program 'AI Programmming with Python'
+
+**disclaimer**
+A ready-to-use classifier is used
+
+**contents**
+classifies pet images
+uses a pretrained CNN model
+compares classification to true identity oft the pets (true identity is part of filename)
+outputs statistics how well the respective CNN performed
+user can choose between three CNN architectures to evaluate classification performance
+**preparation**
+install Python 3 or newer
+ensure that PIL is installed
+clone directory containing all files
+ensure that folder 'uploaded images' is present
+how to classify images
+input: prepare your image
+choose an image of a pet you find in the internet
+ensure that the image file is a jpeg-format or has been converted to jpeg-format
+renaming the file is not sufficient, you need to convert it if it is not jpeg-format
+put the jpeg-file in folder 'uploaded images'
+rename the image follow this naming convention: petname_imagenumber.jpg (image number can be chosen by you)
+**run script/do classify**
+run check_images.py in Python shell by typing in command python check_images.py
+**output: evaluate performance and statistics**
+classification performance (time needed for classification, each architecture can be different)
+classification statistics (Number of images classified, number of dog images, number of not-dog-images, number of matches, number of correct dog matches, number of correct dog breed matches, percentage of matched images, percentages of correctly as dogs classified images, number of correctly classified dog breed images, number of not-dog-images correctly classified, percentage of not-dogs correctly classified)
+for further analysis/follow up: showing names of all misclassified images that were classified as dogs but are not dogs
+for furter analysis/follow up: showing misclassified images with dog breeds that were not recognized by the model as dogs
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9dd46f03-d47b-4562-966d-21646b5dc038" alt="Image Description" width="300">
+</p>
+
+
